@@ -1,13 +1,14 @@
-import { AbsoluteFill, OffthreadVideo } from "remotion";
-import { loadFont, fontFamily } from "@remotion/google-fonts/Inter";
-import React, { useMemo } from "react";
+import { AbsoluteFill } from "remotion";
+// import { loadFont } from "@remotion/google-fonts/Inter";
+import React from "react";
 import LoopedOffthreadVideo from "./LoopedOffthreadVideo";
-loadFont();
+import { Timer } from "./Timer";
+// loadFont();
 const containerStyle: React.CSSProperties = {
   position: "relative",
   width: "100%",
   height: "100%",
-  backgroundColor: "black",
+  backgroundColor: "yellow",
 };
 
 const videoStyle: React.CSSProperties = {
@@ -44,6 +45,7 @@ export const Main = () => {
         pauseWhenBuffering={true}
         style={{ ...videoStyle, bottom: 0, right: 0 }}
       />
+      <Timer />
     </AbsoluteFill>
   );
 };
