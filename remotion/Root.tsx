@@ -1,5 +1,6 @@
 import { Composition } from "remotion";
 import { Main } from "./VideoComp/Main";
+import { MainV2 } from "./VideoComp/MainV2";
 import {
   COMP_NAME,
   defaultMyCompProps,
@@ -15,6 +16,16 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id={COMP_NAME}
         component={Main}
+        durationInFrames={DURATION_IN_FRAMES}
+        fps={VIDEO_FPS}
+        width={VIDEO_WIDTH}
+        height={VIDEO_HEIGHT}
+        defaultProps={defaultMyCompProps}
+      />
+
+      <Composition
+        id={"MyCompV2"}
+        component={MainV2}
         durationInFrames={DURATION_IN_FRAMES}
         fps={VIDEO_FPS}
         width={VIDEO_WIDTH}
